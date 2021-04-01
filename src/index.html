@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digestion is the key to life</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/play_video.js"></script>
+</head>
+<body>
+    <section class="container">
+        <div class="content">
+            <div class="label content__label"></div>
+            <p class="text content__text">Digestion is<span class="text_italic">&nbsp;the key&nbsp;</span>to overall wellness in Body, Mind and Spirit</p>
+            <button id="playBtn" class="play-button content__play-button"><img class="play-button__img" src="/img/play-btn.svg" alt="play video"/></button>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div id="videoModal" class="modal">
+        <div class="modal__layout">
+            <button id="closeBtn" class="modal__close-btn">&times;</button>
+            <iframe id="iframeVideo"  
+            src="https://www.youtube.com/embed/qN3OueBm9F4?enablejsapi=1" 
+            frameborder="0" 
+            allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <script>
+        new PlayVideo({
+            btnId:"playBtn",
+            modalId:"videoModal",
+            closeBtnId:"closeBtn"
+        }).init();
+    </script>
+
+</body>
+</html>

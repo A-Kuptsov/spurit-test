@@ -1,0 +1,111 @@
+@import "modal.css";
+@import "fonts.css";
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background: #183028;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container::after {
+  content: "";
+  background: url(/img/bg.png);
+  background-size: cover;
+  opacity: 0.4;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 940px;
+  margin: 2rem 0;
+}
+.content__text {
+  margin: 0;
+  padding: 0;
+}
+
+.text {
+  color: #fff;
+  font-size: 50px;
+  line-height: 60px;
+  letter-spacing: 0.27px;
+  font-family: "Tiempos Headline Black";
+  text-align: center;
+}
+.text_italic {
+  font-size: 70px;
+  letter-spacing: 0.38px;
+  font-family: "Quentin";
+}
+
+.content__label {
+  margin-bottom: 2rem;
+}
+.label {
+  width: 100px;
+  height: 9px;
+  background: #ffdf37;
+}
+
+.content__play-button {
+  margin-top: 2rem;
+}
+.play-button {
+  padding: 4px 8px;
+  border: none;
+  box-shadow: 0 0 0 1px transparent;
+  background: transparent;
+  border-radius: 4px;
+  transition: transform 0.15s linear;
+}
+.play-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 1px #fff;
+  transition: all 0.05s linear;
+}
+.play-button__img {
+  vertical-align: middle;
+  margin: 2px;
+}
+.play-button:hover {
+  cursor: pointer;
+}
+
+/* body backgraund animation (exclude mobile)*/
+@media screen and (min-width: 1024px) {
+  body {
+    overflow-y: hidden;
+  }
+  .container::after {
+    animation: zoom-bg 5s ease-out both;
+  }
+}
+@keyframes zoom-bg {
+  0% {
+    transform: scale(1) translateY(0);
+    transform-origin: top right;
+  }
+  100% {
+    transform: scale(1.05) translateY(0);
+    transform-origin: top right;
+  }
+}

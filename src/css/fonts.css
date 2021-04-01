@@ -1,0 +1,19 @@
+@font-face {
+  font-family: "Tiempos Headline Black";
+  src: url("/fonts/TiemposHeadline-Black.eot");
+  src: url("/fonts/TiemposHeadline-Black.eot?#iefix")
+      format("embedded-opentype"),
+    url("/fonts/TiemposHeadline-Black.woff") format("woff"),
+    url("/fonts/TiemposHeadline-Black.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Quentin";
+  src: url("/fonts/Quentin.eot?") format("eot"),
+    url("/fonts/Quentin.woff") format("woff"),
+    url("/fonts/Quentin.ttf") format("truetype"),
+    url("/fonts/Quentin.svg#Quentin") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}

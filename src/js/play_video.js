@@ -34,6 +34,13 @@ class PlayVideo {
       }
     };
 
+    const handleOutsideAction = function(e) {
+      if (e.target === modalRef) {
+        PlayVideo.destroy(modalRef, escapeListener);
+        PlayVideo.destroy(null, tabListener);
+      }
+    };
+
     openBtnRef.onclick = function() {
       modalRef.classList.add("modal_is-visible");
       document.addEventListener("keydown", escapeListener);
@@ -46,10 +53,10 @@ class PlayVideo {
     };
 
     document.onclick = function(e) {
-      if (e.target === modalRef) {
-        PlayVideo.destroy(modalRef, escapeListener);
-        PlayVideo.destroy(null, tabListener);
-      }
+      handleOutsideAction(e);
+    };
+    document.ontouchstart = function(e) {
+      handleOutsideAction(e);
     };
   }
 }

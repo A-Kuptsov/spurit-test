@@ -8,7 +8,7 @@
   height: 100%;
   overflow: auto;
   background-color: rgb(0, 0, 0);
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 .modal_is-visible {
   display: flex;
@@ -19,15 +19,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 2rem;
   aspect-ratio: 16/9;
   max-width: 90%;
-  height: calc(80% - 4rem);
-  padding: 2rem 0;
+  /* max-height: 80%; */
 }
 
 .modal__layout > iframe {
-  padding: 2rem 2rem;
   aspect-ratio: 16/9;
   max-width: 90%;
   width: 100%;
@@ -53,4 +50,11 @@
   color: #fff;
   text-decoration: none;
   cursor: pointer;
+}
+
+@media screen and (orientation: landscape) {
+  .modal__layout {
+    height: 80%;
+    /* margin-bottom: 2rem; */
+  }
 }
